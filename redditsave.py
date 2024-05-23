@@ -203,7 +203,7 @@ os.chdir(Downloads)
 print('Changed the current working directory to:')
 print(os.getcwd())
 
-os.chdir(child_path)
+os.chdir('/Users/traversjc/projects/export-archive-reddit-saved/SCRATCH/reddit-saved/subs')
 print(os.getcwd())
 
 #checking if the program is syncing or for the first time
@@ -312,7 +312,7 @@ else:
     partialfooter('Landing.html', ssub)
 
     #moving landing page to parent folder
-    shutil.move('Landing.html', parent_path)
+    shutil.move('Landing.html', '/Users/traversjc/projects/export-archive-reddit-saved/SCRATCH/reddit-saved')
     os.chdir(parent_path)
 
     #copying assets to output

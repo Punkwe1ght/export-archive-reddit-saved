@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObsidianMD</title>
+    <link href="https://fonts.googleapis.com/css?family=Sniglet|Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="container"><h1><span class = "subreddit">r/ObsidianMD </span></h1>
+<div class="post">
+<h2>Obsidian as all-in-one daily note(calendar, reminder, task management, ledger...)</h2>
+<span class = "user">posted by: u/park_from_sk </span><span class = "numcomments">38 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/14lsz6g/obsidian_as_allinone_daily_notecalendar_reminder/" target="_blank">(source)</a>
+<button onclick="toggles(2)">View full post</button><div id="2" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>I am an ADD patient; I easily lose my track if anything gets complicated or scattered. I&#39;ve tried to sort this out by using a combination of different apps. It simply does not work because of <strong>frequent context changing</strong>.</p>
+
+<p>I&#39;ve gradually moved everything into an Obsidian daily note by handwritten dataview scripts. I have been using this method for over 10 months and this works great for myself, especially because there&#39;s no need to open up different apps for different stuffs.</p>
+
+<p>So far there haven&#39;t been any better solutions out there; always end up returning to this Obsidian daily note.</p>
+
+<p>In my solution, a typical daily note includes:</p>
+
+<p>- timetable(backbone of everything)</p>
+
+<p>- task management &amp; reminder</p>
+
+<p>- quick note</p>
+
+<p>- expenditure memo &amp; automatic currency converter &amp; sum calculator</p>
+
+<p>these are all in a single file, created daily.</p>
+
+<p>&#x200B;</p>
+
+<p>a daily note markdown looks like this:</p>
+
+<pre><code>2023-06-29.md
+# 2023-06-29 Thu
+- currencyRate::1300
+(KRW to EUR currency rate)
+- 08:00 [[wake up]]
+- 09:00 [[habitual task 1]]
+  - quick memo 1
+  - spent::mart A, bought an item-3900KRW
+  - spent::mart B, bought an item-10EUR
+- 10:00 [[habitual task 2]]
+  - event::something interesting happened. -&gt; this is collected from event note.
+  - some random thoughts.
+</code></pre>
+
+<p>&#x200B;</p>
+
+<p>the note is accessible from my phone as well, with iOS shortcuts + Obsidian Advanced URI plugin. I can just press a shortcut icon to input anything.</p>
+
+<p><a href="https://preview.redd.it/mjr1a48o8v8b1.png?width=871&amp;format=png&amp;auto=webp&amp;v=enabled&amp;s=111f945dfdf3ec61f1b4f392d442d855bb0b7997">https://preview.redd.it/mjr1a48o8v8b1.png?width=871&amp;format=png&amp;auto=webp&amp;v=enabled&amp;s=111f945dfdf3ec61f1b4f392d442d855bb0b7997</a></p>
+
+<p>for example, pressing `now!` allows me to select from habitual task presets:</p>
+
+<p>&#x200B;</p>
+
+<p><a href="https://preview.redd.it/lahtwcly8v8b1.png?width=1170&amp;format=png&amp;auto=webp&amp;v=enabled&amp;s=2cd9dc506732e6977d72d08359b8dace0b59effa">https://preview.redd.it/lahtwcly8v8b1.png?width=1170&amp;format=png&amp;auto=webp&amp;v=enabled&amp;s=2cd9dc506732e6977d72d08359b8dace0b59effa</a></p>
+
+<p>and then this automatically puts the current time and the task name to the schedule.</p>
+
+<pre><code>- 11:14 [[meal]]
+</code></pre>
+
+<p>&#x200B;</p>
+
+<p>I am proud of my custom handwritten dataview script for daily schedule preview.</p>
+
+<p>&#x200B;</p>
+
+<p><a href="https://preview.redd.it/jf2vmx5g9v8b1.png?width=710&amp;format=png&amp;auto=webp&amp;v=enabled&amp;s=08f38c4db13ed591b7b9efce13aae520f15c6d98">https://preview.redd.it/jf2vmx5g9v8b1.png?width=710&amp;format=png&amp;auto=webp&amp;v=enabled&amp;s=08f38c4db13ed591b7b9efce13aae520f15c6d98</a></p>
+
+<p>the 👉 emoji stands for clockhand. total sum of expenditure is automatically calculated below.</p>
+
+<p>&#x200B;</p>
+
+<p>this is a reminder, made with dataview script. D+XXX stands for the time since the start of the task. with this, I can track what is going on in long term. each task has its tags and starting date.</p>
+
+<pre><code>- 10:00 [[habitual task 1]]
+  - [ ] a task should be done[start::2023-12-01]
+  - [ ] task something something[start::2023-01-01],[[some-tag]]
+</code></pre>
+
+<p>&#x200B;</p>
+
+<p><a href="https://preview.redd.it/pce8nlkq9v8b1.png?width=1340&amp;format=png&amp;auto=webp&amp;v=enabled&amp;s=7d39d91c19f2e6a8b5d33a28d2e6187ab3d55033">https://preview.redd.it/pce8nlkq9v8b1.png?width=1340&amp;format=png&amp;auto=webp&amp;v=enabled&amp;s=7d39d91c19f2e6a8b5d33a28d2e6187ab3d55033</a></p>
+
+<p>the tasks that start within a week are separately displayed as well.</p>
+
+<p>&#x200B;</p>
+
+<p><a href="https://preview.redd.it/q29dp08cav8b1.png?width=1244&amp;format=png&amp;auto=webp&amp;v=enabled&amp;s=8c1ce44d8fb1dfcd8ace199ee6ecf999d27457fc">https://preview.redd.it/q29dp08cav8b1.png?width=1244&amp;format=png&amp;auto=webp&amp;v=enabled&amp;s=8c1ce44d8fb1dfcd8ace199ee6ecf999d27457fc</a></p>
+
+<p>It solves most of the issues but still has shortcomings:</p>
+
+<p>- lack of WIP state for tasks: I mitigated this with custom tag element but it does not feel natural. tried to use community plugins but they are still lacking good user interface.</p>
+
+<p>- no 3rd party app connections/it can&#39;t notify me on time: I need to open up Obsidian every hour and minute to check what is happening.</p>
+
+<p>- weak for bodydoubling method: I still need to use separate app for bodydoubling. i.e. <a href="https://centered.app">cen****d.app</a>. this bodydoubling app makes me to focus on task by sharing my current task with other users. This also has `always on top with minimized UI` option, which works great for the focus. However, it causes another clutter for me because I need to write down the task in a separate app again. I want to replace it if possible.</p>
+
+<p>I love Obsidian💕. Without it, I&#39;d probably download a something something management every now and then, then delete it and reinstall it. It literally is a lifesaver for me.</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Easy Exports to Academic Templates</h2>
+<span class = "user">posted by: u/Soft-Material3294 </span><span class = "numcomments">41 comments </span><a href="https://i.redd.it/dkaesy3zt88b1.gif" target="_blank">(source)</a>
+<button onclick="toggles(4)">View full post</button><div id="4" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>Guides on file structure and organisation (Naming conventions, links & tags)</h2>
+<span class = "user">posted by: u/timjwes </span><span class = "numcomments">5 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/14hphxv/guides_on_file_structure_and_organisation_naming/" target="_blank">(source)</a>
+<button onclick="toggles(7)">View full post</button><div id="7" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>Other than PARA (which I use my own tweaked version of), are there any other resources which explain any use cases of what’s in the title?</p>
+
+<p>I see some amazing graph views on here, which while look very good, don’t always purvey the rationale behind the thinking that produced them. </p>
+
+<p>I’ve been working on my own way of ‘linking my thinking’ both in terms of the areas of my life (a key one being the development of a personal philosophy) and the subjects I’m working on and with professionally, but there are a good few gaps in how the notes correlate with each other - namely resulting in more ‘lists of lists’</p>
+
+<p>I’ve also been looking at the principles behind ‘The Brain’ app and am wondering if excalibrain is the answer here.</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>2 Years Worth of Computer Science University Notes Visualized!</h2>
+<span class = "user">posted by: u/edweenie123 </span><span class = "numcomments">72 comments </span><a href="https://www.reddit.com/gallery/148xbp0" target="_blank">(source)</a>
+<button onclick="toggles(17)">View full post</button><div id="17" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>Masterplan in obsidian</h2>
+<span class = "user">posted by: u/shuten_mind </span><span class = "numcomments">14 comments </span><a href="https://i.redd.it/qvw8yxhoge5b1.png" target="_blank">(source)</a>
+<button onclick="toggles(21)">View full post</button><div id="21" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>My Global Graph View of All My Notes</h2>
+<span class = "user">posted by: u/AnarSyn17 </span><span class = "numcomments">36 comments </span><a href="https://www.reddit.com/gallery/1431cyr" target="_blank">(source)</a>
+<button onclick="toggles(28)">View full post</button><div id="28" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>I don’t ever use the global graph view in Obsidian, so I hadn’t checked it out for more than a year (I use the local graph view instead). Decided to open it up today out of curiosity and I was actually surprised by both the size and (relative) homogeneity of the notes. I’m a Ph.D. candidate in electrical engineering and I decided to make the switch to Obsidian from OneNote after experiencing many frustrations with OneNote. So, after “porting” some of my notes from OneNote to Obsidian and basically starting my notebook from scratch (I had a pretty organized notebook in OneNote for my Ph.D.) here is the result. I was really worried about being able to replicate my workflow in Obsidian, but I was able to and, not only that, I was able to improve it via many of the core and community plugins in Obsidian. </p>
+
+<p>Anyways, just felt like sharing this and maybe inspire those people who are on the fence about making the switch to Obsidian. If you do it, you won’t regret it!</p>
+
+<p>Thanks to the Obsidian team!</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Another Zotero Integration</h2>
+<span class = "user">posted by: u/Fus__Ro__Dah </span><span class = "numcomments">11 comments </span><a href="https://www.reddit.com/gallery/141jbp4" target="_blank">(source)</a>
+<button onclick="toggles(32)">View full post</button><div id="32" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>Obsidian TTRPG Tutorials Site Now Live</h2>
+<span class = "user">posted by: u/JP_Sklore </span><span class = "numcomments">23 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/140b59a/obsidian_ttrpg_tutorials_site_now_live/" target="_blank">(source)</a>
+<button onclick="toggles(34)">View full post</button><div id="34" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>Obsidian TTRPG Tutorials is a new site dedicated to helping new TTRPG and World Building users learn how to get the most out of <a href="https://Obsidian.md">Obsidian.md</a>.</p>
+
+<p><a href="https://obsidianttrpgtutorials.com/?fbclid=IwAR0TzYrDH5EOTJ80NCf7xj03eaWi8HsPeLVPpDN4w-N4nXCaNRYlWCVQkXo">https://obsidianttrpgtutorials.com/</a></p>
+
+<p>I make tutorials for the tool already but there is a vast rabbit hole of things you can do with this tool and as such I have made an Obsidian Publish site to try and make it easier for new users to both find and learn how to use the functionality they are looking for. The plugins recommended are generally all targeted at TTRPG or World Building users.</p>
+
+<p>There&#39;s still lot more I want to do with the site but hopefully it should be useful to new users already. If there are things you would like added or clarity you need for a specific plugin or method. Feel free to reach out. </p>
+
+<p><a href="https://preview.redd.it/0vp40x4hsz3b1.jpg?width=1920&amp;format=pjpg&amp;auto=webp&amp;v=enabled&amp;s=18c4e0b736bb40f9607424209360e6263428fcd6">https://preview.redd.it/0vp40x4hsz3b1.jpg?width=1920&amp;format=pjpg&amp;auto=webp&amp;v=enabled&amp;s=18c4e0b736bb40f9607424209360e6263428fcd6</a></p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>What are your favorite YouTube channels for Obsidian?</h2>
+<span class = "user">posted by: u/hungrytako </span><span class = "numcomments">47 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/13wt420/what_are_your_favorite_youtube_channels_for/" target="_blank">(source)</a>
+<button onclick="toggles(37)">View full post</button><div id="37" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>I&#39;m looking to learn more about Obsidian and how to use it, and I learn best from videos. I&#39;ve gone through a lot of Nick Milo&#39;s content and want to find some other creators that produce good content.,</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Routines + Timer</h2>
+<span class = "user">posted by: u/Zarstu </span><span class = "numcomments">8 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/13vltar/routines_timer/" target="_blank">(source)</a>
+<button onclick="toggles(42)">View full post</button><div id="42" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>So, I&#39;m creating a study routine where I cover each of the subjects I&#39;m studying everyday. I&#39;m looking for an ios app/ pc program that allows me to set different routines (i.e. Block 1: Subject1, Subject 2 or Block 2: Subject3, Subject4) and each of them has a timer (so, for each routine, let&#39;s take for example Block 1: Subject1 (1 hour) &amp; Subject2 (1 hour)). I&#39;ve found several apps that allow me to do that, but the main problem I&#39;ve found is that they are fixed for a specific time of the day. I want to be able to start a routine at any moment.</p>
+
+<p>Tiimo is the one app I&#39;ve found adjusts better to this, but it&#39;s expensive, and I&#39;m a college student.</p>
+
+<p>I&#39;ve also seen an app called TimeTune which supposedly  does this, but it&#39;s only Android- available. </p>
+
+<p>Is there any way around this with any Obsidian plugin? </p>
+
+<p>(I&#39;m not a regular user, so this might&#39;ve just been a silly question)</p>
+
+<p>Edit: As I see some people are also interested on this, I’m posting an <a href="https://www.reddit.com/r/productivity/comments/13vos55/routines_timer/jm73b0k/?utm_source=share&amp;utm_medium=ios_app&amp;utm_name=ioscss&amp;utm_content=1&amp;utm_term=1&amp;context=3">answer</a> I got in another community. Works out perfectly for me.</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Garden - planning with Canvas</h2>
+<span class = "user">posted by: u/abhuva79 </span><span class = "numcomments">30 comments </span><a href="https://i.redd.it/11zsosang90b1.png" target="_blank">(source)</a>
+<button onclick="toggles(52)">View full post</button><div id="52" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>Notes on the Fly</h2>
+<span class = "user">posted by: u/Bicentennial_Douche </span><span class = "numcomments">44 comments </span><a href="/r/ObsidianMD/comments/12oiu3e/notes_on_the_fly/jgldy2w/" target="_blank">(source)</a>
+<button onclick="toggles(53)">View full post</button><div id="53" class="mdwrapper"><div class="md"><p><a href="https://forums.getdrafts.com/t/using-obsidian-with-drafts/11221">https://forums.getdrafts.com/t/using-obsidian-with-drafts/11221</a></p>
+</div></div>
+</div>
+<div class="post">
+<h2>Notes on the Fly</h2>
+<span class = "user">posted by: u/rsrandall_ </span><span class = "numcomments">44 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/12oiu3e/notes_on_the_fly/" target="_blank">(source)</a>
+<button onclick="toggles(54)">View full post</button><div id="54" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>Hello Awesome ObsidianMD Community. I have learned so much since starting my PKM journey about two months ago. I have to give much **thanks to all of You** for this subreddit and associated community.</p>
+
+<p>Seeking some advice specifically on taking notes on the fly - like capturing really quick thoughts and ideas to develop later. What I would like to achieve, for example, is creating a quick voice note at 2:30 am when I wake up with an idea, have it transcribed to text, and dropped in a specified folder (ex. my Inbox) as a note for development later. Additionally, perhaps being able to send a quick email or text message that results in the same. I know I could open my vault, but prefer something real quick and potentially hands free.</p>
+
+<p>I use all Apple products -iPhone, iPad and MBP and while I would not object to paying a subscription fee, clearly would rather not have to.</p>
+
+<p>Any suggestions, links to YouTube videos or blogs is much appreciated in advance.</p>
+
+<p>-------------------</p>
+
+<p>EDITED to simply say &quot;Thanks&quot; to all the awesome suggestions. I am going to use the iOS Shortcut for voice to vault, and Drafts for web clippings, etc...</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Flexible web clippers that work with Obsidian?</h2>
+<span class = "user">posted by: u/discoborg </span><span class = "numcomments">21 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/12woppe/flexible_web_clippers_that_work_with_obsidian/" target="_blank">(source)</a>
+<button onclick="toggles(55)">View full post</button><div id="55" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>I am attempting to use Obsidian (also looking at Logseq if their sync option ever matures)as a place for notes that are made available to all my devices via Obsidian sync .</p>
+
+<p>The problem I’m running into is how to selectively clip content from the web, PDFs and other media, while retaining the ability to select only the content I want and remove any extraneous contacts, such as ads, sidebars, navigation elements or any content that I don’t need saved. </p>
+
+<p>I have looked at many different Webb clippers, but none of them seem to offer the consistency and flexibility needed in capturing content from the web. They either capture the entire web page (including navigation elements, ads, etc …) or they only allow text to be selected. I need something that will allow the clipping of audio, video, images, text formatting, and layout while retaining the ability to edit out content I do not wish to save.</p>
+
+<p>Does any such web clipper that integrates with Obsidian exist? I do realize I am asking for a lot of functionality.</p>
+
+<p>I was looking a Zotero, since it has the ability to save PDF documents. However, what I don’t know is, if you have the ability to edit these PDFs and selectively remove or add Contant once it is captured.</p>
+
+<p>Also, the ability to clip, edit and view web content from a mobile device would be incredible.</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Metadata in Obsidian</h2>
+<span class = "user">posted by: u/TheJoker1432 </span><span class = "numcomments">13 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/138cqan/metadata_in_obsidian/" target="_blank">(source)</a>
+<button onclick="toggles(56)">View full post</button><div id="56" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>Hey I have been using Obsidian for a few months now and I have a couple templates for different purposes.</p>
+
+<p>So far I have used formats similar to: <a href="https://betterhumans.pub/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8">https://betterhumans.pub/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8</a></p>
+
+<p>One thing I do is entering metadata at the top of the note with key:: value pairs.</p>
+
+<p>It is not a YAML header but the double :: seems to do the same things?For example I can use them as columns in a dataview table</p>
+
+<p>For example my book template:</p>
+
+<pre><code>### [[Books MOC]]
+
+**Author**:: [[]]
+**Started**::
+**Finished**::
+**Tags**:: #literature/books
+**Grade**:: 
+**Related**::
+
+___
+
+# {{title}}
+
+___
+
+References:
+
+Created: {{date}} {{time}}
+</code></pre>
+
+<p>However I see so many people use and recommend YAML headers that I am not sure if I am missing out on good features.</p>
+
+<p>Would it be worth it to change my templates and possibly all created notes to a YAML header insteaf of key::value?</p>
+
+<p>Does anyone know of differences between both formats?</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Best plug-in for chat GPT for Obsidian?</h2>
+<span class = "user">posted by: u/ConsistentAndWin </span><span class = "numcomments">9 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/13cuq8w/best_plugin_for_chat_gpt_for_obsidian/" target="_blank">(source)</a>
+<button onclick="toggles(59)">View full post</button><div id="59" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>There seems to be a number of options in the community area of Obsidian.</p>
+
+<p>Rather than just experiment, I&#39;m hoping maybe somebody has some experience with this and can recommend a great plug-in to allow me to work with Chat GPT right within obsidian.</p>
+
+<p>I&#39;m not really comfortable installing things that are not easily done through the community area. So it should be a plug-in that has gone through approval. </p>
+
+<p>If it could interact with my notes, all the better. </p>
+
+<p>Any ideas would be most helpful.</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Tips for rpg organization?</h2>
+<span class = "user">posted by: u/kat31rules </span><span class = "numcomments">5 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/13f8lj9/tips_for_rpg_organization/" target="_blank">(source)</a>
+<button onclick="toggles(60)">View full post</button><div id="60" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>I&#39;m new to obsidian and I&#39;d like to organize notes for a rpg campaign. What might be the best way to organize things that happened in events and relationships between characters?  I currently have a folder of seperate characters notes, folder of location notes and an events folder. Is there anyway to organize things from events into each character&#39;s notes without too much extra work or linking two specific characters together? This might be an unrealistic question, idk.</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Searching for plugin to automatically organize files into folders</h2>
+<span class = "user">posted by: u/davemacdo </span><span class = "numcomments">7 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/12zenec/searching_for_plugin_to_automatically_organize/" target="_blank">(source)</a>
+<button onclick="toggles(85)">View full post</button><div id="85" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>Hi all. I’m a music professor and relatively new Obsidian user. I put my lesson outlines in Obsidian, and those sometimes include images/diagrams for myself, and they nearly always include short audio clips to play in class. I love that my outline can have a little in-line audio player, but mixing up all these images and audio in my notes list gets confusing quickly. Since I basically never need the audio files or images on their own (and they would often not be very meaningful outside the context of the note), I put them into a folder for images and another for audio. </p>
+
+<p>Is there a way to do this sorting automatically? When I search for plugins that “sort” or “organize” they’re usually not dealing with file type, or they’re only dealing with the <em>order</em> of notes in the sidebar. I’m on a Mac/iPad if that makes a difference.</p>
+
+<p>Thanks!</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Has anyone else spent lots of time invested in PKM systems before moving to Obsidian? Do you feel bad about it?</h2>
+<span class = "user">posted by: u/TheTwelveYearOld </span><span class = "numcomments">27 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/12mveja/has_anyone_else_spent_lots_of_time_invested_in/" target="_blank">(source)</a>
+<button onclick="toggles(98)">View full post</button><div id="98" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>Before I switched to Obsidian a few months ago, I was really invested in Mediawiki. I had first set it up 3 years ago after having edited on Wikia (now Fandom) wikis years before that. I really liked how it worked, it seemed like a very comprehensive system for knowledge. Wiki pages with infoboxes, custom templates, page histories, and some other features. It&#39;s also and maintained by Wikipedia devs since it runs the website.</p>
+
+<p>However, Most of that is possible in Obsidian, and its much easier to use than Mediawiki, <strong>which isn&#39;t even meant for PKM, its wiki software to run as a website like Wikipedia</strong>. It requires setting up a web server which is a very involved, technical process. It&#39;s not feasible if you aren&#39;t very tech savvy. Data is stored in a SQL database, and I&#39;ve actually had lots of issues with it. I had database errors a lot and kept fixing them. Every time it happened, I thought once I fixed them, that would be it and I wouldn&#39;t have problems again, at least for a while. Eventually I had enough and just stopped using it. I didn&#39;t want to find another wiki or PKM system since I invested so much time into it. Here&#39;s a lesson: the worst PKM system is the one you don&#39;t want to work or write on.</p>
+
+<p>After spending lots of time away from it, I had been wanting a replacement and did lots of googling and research for note taking apps until I found Obsidian. It took some time to me to accept that I wasted lots of time trying to make Mediawiki work, but I got over it. I&#39;ve spent very little of fixing issues, and almost all of it either writing or improving my vault with plugins or other management. I feel lots of satisfaction whenever I write in it. Needless to say, I&#39;m very happy with my Obsidian vault.</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>I want to get started in Obsidian, w/ Zettelkasten system, but I'm a bit overwhelmed by the amount of content available. What should I go for to learn how to use Obsidian and apply the method in it?</h2>
+<span class = "user">posted by: u/eggplantinstrument </span><span class = "numcomments">34 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/12f48tx/i_want_to_get_started_in_obsidian_w_zettelkasten/" target="_blank">(source)</a>
+<button onclick="toggles(127)">View full post</button><div id="127" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>My setup as a researcher. How to write, run statistics, and work seamlessly with R, Obsidian, Linux, and Zotero, and collaborate with senior professors who only accept MS Word files!</h2>
+<span class = "user">posted by: u/MavropaliasG </span><span class = "numcomments">57 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/124cd8y/my_setup_as_a_researcher_how_to_write_run/" target="_blank">(source)</a>
+<button onclick="toggles(158)">View full post</button><div id="158" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>I am a researcher, and a lot of what I do is analyzing data and writing papers. Below the setup I use to write papers and collaborate with others who are using other software.</p>
+
+<p>&#x200B;</p>
+
+<p>So some things I needed my setup have are:</p>
+
+<ol>
+<li>Zotero integration. I have been using Zotero (<a href="https://www.zotero.org/">https://www.zotero.org/</a>) daily for more than 10 years now.</li>
+<li>I didn&#39;t want to use Microsoft Word, as I use Linux. Wine (compatibility layer that allows you to run Windows software in Linux) cannot support it as well as I wanted (there are multiple bugs with MS office, and especially when you want it to integrate with Zotero... I&#39;d have to run Zotero with Wine too), so I have to boot up a virtual machine inside Linux to work every day.</li>
+<li>R and Rstudio. I use R for my statistical analysis, and I primarily run it through Rstudio. Now lately I have started using Rmarkdown to also write, as I can use inline code blocks and have it produce outputs of statistical analyses right into a paragraph of text (e.g. &quot;the mean age of the participants was X ± Y&quot;, and the X and Y would actually be R code that would print the output in line, thereby reducing the chance for copy-pasting mistakes, and would automatically change output if I change anything in the analysis). In addition, Zotero integrates beautifully with Rstudio and Rmarkdown, so I can literally write an entire scientific paper in RStudio without needing to ever use Word.</li>
+<li>Be able to output in MS Word. A problem that came up a lot in my setup over the years is dealing with senior collaborators. During my PhD I wanted to switch to using LibreOffice or even using the online MS Word, and senior professors would tell me to send them a MS word file (docx), without compromising. What I can do now is write things in Rmarkdown and have knitr output everything into a docx, which I send them, they send me back their tracked changes, I integrate them manually in the Rmarkdown, and produce the next version. I actually prefer to integrate things manually instead of pressing &quot;accept changes&quot;, because many times I don&#39;t agree with all changes, and integrating things manually makes me re-think of the change and get better ideas.</li>
+<li>I want to use Obsidian for writing. This is because I love markdown, and I also use syncthing (<a href="https://syncthing.net/">https://syncthing.net/</a>) to sync my Obsidian library with my laptop, my phone, and my desktop, so wherever I am I can pop open my laptop or phone, work on a paper a bit or add quick notes, and have them update everywhere. Then, when I sit down to do some deep writing on my desktop, I can use my multi-screen setup to open 4-5 windows of the same document in different places.</li>
+</ol>
+
+<p>&#x200B;</p>
+
+<p>So, how to make all that work seamlessly?</p>
+
+<p>&#x200B;</p>
+
+<p>One problem is that Obsidian cannot view Rmarkdown files (.Rmd), and RStudio does not recognize markdown files (.md) as Rmardown, even though it may contain R code blocks. A solution I found is I modified the Obsidian plugin &#39;txt as md&#39; (<a href="https://github.com/deathau/txt-as-md-obsidian">https://github.com/deathau/txt-as-md-obsidian</a>) to also add more filetypes, including Rmd. Once you do that, Obsidian can easily open and work with .Rmd files as if they are native md files.</p>
+
+<p>&#x200B;</p>
+
+<p>Another problem is that no matter how much I tried, the two available Zotero plugins for Obsidian do not work for me (this <a href="https://github.com/mgmeyers/obsidian-zotero-integration">https://github.com/mgmeyers/obsidian-zotero-integration</a> and this <a href="https://github.com/hans/obsidian-citation-plugin">https://github.com/hans/obsidian-citation-plugin</a>). I am not sure if that is because I&#39;m on Linux, but they just don&#39;t work. However, RStudio on Linux works great with Zotero, and I can easily add citations using the Better BibTeX for Zotero plugin (<a href="https://github.com/retorquere/zotero-better-bibtex">https://github.com/retorquere/zotero-better-bibtex</a>) to create citation keys. That way, I can simply copy/paste the citation key (e.g. &#39;@lastname2020&#39;) in the text and have it render into the citation when I render the file in Rstudio. I sometimes write documents with &gt; 300 references, and with Zotero running in a Windows VM trying to refresh a huge word document takes a long time, and would lead to corrupt citations. That&#39;s no problem with a markdown/Rmarkdown document.</p>
+
+<p>&#x200B;</p>
+
+<p>Want to run huge mixed-effects models, meta analyses, and use the power of tidyverse within Obsidian? Easy! Want your document to have over 300 references and not slow down your PC when you want to change a reference? Easy! If you are advanced, as you are basically working with markdown text, this setup allows you to use version control through git, which is way more powerful than any version control Word offers. If you are REALLY advanced, you can easily open this document and edit rapidly with other code/text editors (I use Kate in Linux, but you can edit it with Emacs or Vim).</p>
+
+<p>&#x200B;</p>
+
+<p>So now what I do is:</p>
+
+<ol>
+<li>I create a new markdown file in Obsidian in the folder that I want.</li>
+<li>Click on the file and &quot;Show in system explorer&quot;</li>
+<li>Change the file extension to &#39;.Rmd&#39;. Now it&#39;s a Rmarkdown file</li>
+<li>Write and work on the data analysis and the text. I can now add references through the citation keys (e.g. &#39;@lastname2020&#39;) and add R code blocks to have my statistical analysis AND the journal article for the project all in one place. Again that allows me to work a) from Linux b) with Obsidian and all its plugins and the multi-screen editing of the same document, c) from my phone, d) with markdown, e) with Zotero, f) use git, Github, Gitlab etc for the best version control possible, g) rapid backup and sync to all my devices using syncthing.</li>
+<li>Use RStudio to run the statistical analysis and render to docx. That allows me to send a docx to senior professors, integrate their changes, and keep using the ease and power of R and Obsidian to work.</li>
+<li>When I want to submit the paper to a journal, I render again to docx, change the formatting according to what the journal wants, and submit. Rstudio also has packages like papaja (<a href="https://github.com/crsh/papaja">https://github.com/crsh/papaja</a>) which allow you to format an Rmarkdown easily for journal articles.</li>
+</ol>
+
+<p>&#x200B;</p>
+
+<p>So this is how I did it. Any ideas I&#39;d love to hear. I wanted to share in case someone (like me a few years ago) would find this useful.</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>My updated Creator Workspace</h2>
+<span class = "user">posted by: u/GlitchedinOrbit </span><span class = "numcomments">45 comments </span><a href="https://i.redd.it/9rsluesp4bqa1.png" target="_blank">(source)</a>
+<button onclick="toggles(159)">View full post</button><div id="159" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>Using GPT *WITH* Your Obsidian Vault - Text Generator Plugin</h2>
+<span class = "user">posted by: u/runningdocker </span><span class = "numcomments">0 comments </span><a href="https://youtube.com/watch?v=tNAsLbGdM6A&feature=share" target="_blank">(source)</a>
+<button onclick="toggles(173)">View full post</button><div id="173" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>Time vs Topic note taking</h2>
+<span class = "user">posted by: u/vhd90123 </span><span class = "numcomments">20 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/11ce7km/time_vs_topic_note_taking/" target="_blank">(source)</a>
+<button onclick="toggles(175)">View full post</button><div id="175" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>I use time based note taking, ie, jot down notes on a weekly note, every week. But then, I have people I interact with and their notes. Projects I&#39;m involved and their notes. It&#39;s all the same notes, but just organized in a different dimension.</p>
+
+<p>For example, let&#39;s say this is week 05 of 2023, and I&#39;m talking to John, about Daisy&#39;s tasks in project ABC. And I wish I had on project ABC note, all the history of such conversations, instead of having to search to find that I&#39;ve had a similiar conversation back in week 30 of 2022.</p>
+
+<p>Any of you has a suggestion on how to solve this?</p>
+
+<p>I was thinking of either using a dataview query in Daisy&#39;s note for all of her mentions in the weekly logs, but was also considering it could be the other way around. Use a date based query from all other notes in the weekly logs.</p>
+
+<p>Any thoughts are appreciated :)</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>I'm leaving you, Obsidian. It's not you, it's me.</h2>
+<span class = "user">posted by: u/mongonuts </span><span class = "numcomments">42 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/10yzsg0/im_leaving_you_obsidian_its_not_you_its_me/" target="_blank">(source)</a>
+<button onclick="toggles(176)">View full post</button><div id="176" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>I love Obsidian, but for two main reasons I&#39;m going to move to something simpler:</p>
+
+<ul>
+<li>My use case is primarily personal organization of documents with some lightweight notes (with minimal links)</li>
+<li>I&#39;m heavily multi-platform and require web only access in some cases</li>
+</ul>
+
+<p>I considered going to something like Notion, but they make it difficult to import nested directory structures, let alone md files with embedded images. Notion is also overkill for what I need it for. </p>
+
+<p>In general I get caught up in optimizing systems vs using them (and in this case going down the <a href="https://twitter.com/andreyzagoruiko/status/1552086187489107969">toxic productivity rat hole</a>). Sometimes I need to give my head a shake and realize, as a pedestrian in many domains, it&#39;s ok to use simpler tools.</p>
+
+<p>So as weird as it seems, I&#39;m just going to Google Drive.</p>
+
+<p>For others considering the switch, this was my high-level process to migrate what I had in Obsidian:</p>
+
+<ul>
+<li>Clean up the Obsidian md using <a href="https://obsidian-html.github.io/index.html">https://obsidian-html.github.io/index.html</a></li>
+<li>Convert all md files to MS Word (see <a href="https://pastebin.com/fYZSmMj2">hacky script</a> using <a href="https://pandoc.org/">pandoc</a>)</li>
+<li>Using &quot;Folder Upload&quot; from Google Drive after enabling &quot;Convert uploads to Google Docs editor format&quot; to bring in all the content</li>
+</ul>
+
+<p>This is a great community and thanks for all the advice and inspiration.</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>I'm leaving you, Obsidian. It's not you, it's me.</h2>
+<span class = "user">posted by: u/throw445677 </span><span class = "numcomments">42 comments </span><a href="/r/ObsidianMD/comments/10yzsg0/im_leaving_you_obsidian_its_not_you_its_me/j80w9mn/" target="_blank">(source)</a>
+<button onclick="toggles(177)">View full post</button><div id="177" class="mdwrapper"><div class="md"><p>I moved everything to Obsidian a year ago. I loved the tool so much. I put everything in there. But for work management (tasks, meeting notes, stakeholder management, project work), I did not manage to find a flow, so I went back to Notion. </p>
+
+<p>Obsidian for me is information depth (animals —&gt; reptiles —&gt; snakes —&gt; python) and notion is information width (multiple projects, different people, messiness, tasks, invites, documents).</p>
+
+<p>Lately I added <a href="/r/supernote">/r/supernote</a> to my productivity flow and for the first time I feel that nothing needs to be optimised.</p>
+</div></div>
+</div>
+<div class="post">
+<h2>I found an article giving a great overview for using Obsidian for scientific research</h2>
+<span class = "user">posted by: u/petrvsmartivs </span><span class = "numcomments">10 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/10zh8i6/i_found_an_article_giving_a_great_overview_for/" target="_blank">(source)</a>
+<button onclick="toggles(178)">View full post</button><div id="178" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>and I wanted to share it with you, because I am about to start my Master Thesis and I know I will be thankful for these tips!</p>
+
+<p><a href="https://betterhumans.pub/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8">https://betterhumans.pub/how-to-boost-your-productivity-for-scientific-research-using-obsidian-fe85c98c63c8</a></p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Obsidian Integrations (Apps that work with Obsidian)</h2>
+<span class = "user">posted by: u/dileeps987 </span><span class = "numcomments">42 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/11eeoi0/obsidian_integrations_apps_that_work_with_obsidian/" target="_blank">(source)</a>
+<button onclick="toggles(190)">View full post</button><div id="190" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>Hi, </p>
+
+<p>Wondering what are some apps that people use that integrate well with Obsidian? Some that I use are Snipd for podcasts and <a href="https://raindrop.io">raindrop.io</a> for article. If someone has list they are maintaining that would be useful as well.</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>AI implementation into obsidian</h2>
+<span class = "user">posted by: u/YolkyBoii </span><span class = "numcomments">3 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/11dh2mu/ai_implementation_into_obsidian/" target="_blank">(source)</a>
+<button onclick="toggles(195)">View full post</button><div id="195" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>I&#39;m interesting into an all round use of AI in obsidian:</p>
+
+<ul>
+<li>formatting</li>
+<li>summarising</li>
+<li>defining etc.</li>
+</ul>
+
+<p>&#x200B;</p>
+
+<p>I see there are these 3 main options (feel free to send me more):</p>
+
+<ul>
+<li><a href="https://github.com/louis030195/obsidian-ava">Obsidian Ava</a></li>
+<li><a href="https://github.com/nhaouari/obsidian-textgenerator-plugin">Obsidian Text Generator</a></li>
+<li><a href="https://github.com/otelo2/Obsidian-AI">Obsidian AI</a></li>
+</ul>
+
+<p>&#x200B;</p>
+
+<p>I was wondering which one of these 3 options you recommend, which has helped you more with your workflow etc. Cheers :)</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Obsidian Daily Note Template(Journal Edition)</h2>
+<span class = "user">posted by: u/iaimpax </span><span class = "numcomments">19 comments </span><a href="https://www.reddit.com/gallery/11bi35n" target="_blank">(source)</a>
+<button onclick="toggles(202)">View full post</button><div id="202" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>As a Foreign student, I record letures alot so I can review it anytime. Thanks to Obsidian Audio Player its feels so effortless to review those records.</h2>
+<span class = "user">posted by: u/Best-Ad-9592 </span><span class = "numcomments">48 comments </span><a href="https://i.redd.it/nq4ujafd96ka1.png" target="_blank">(source)</a>
+<button onclick="toggles(207)">View full post</button><div id="207" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>PSA for iPad/iPhone users: Set up automations (via Shortcuts) to push/pull your vault via Working Copy so you can do it in the background (for the most part)!</h2>
+<span class = "user">posted by: u/DudeThatsErin </span><span class = "numcomments">21 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/11a4znd/psa_for_ipadiphone_users_set_up_automations_via/" target="_blank">(source)</a>
+<button onclick="toggles(210)">View full post</button><div id="210" class="mdwrapper"><!-- SC_OFF --><div class="md"><p><a href="/u/ryanjamurphy">u/ryanjamurphy</a> created a blog post with links to shortcuts he made using Working Copy to push/pull/commit/sync the vault. I took it one step further and created simple automations that I am going to share below.</p>
+
+<p>Here is a link to his blog post - <a href="https://fulcra.design/Posts/Keeping-a-Working-Copy-git-repo-synchronized-with-Shortcuts/">https://fulcra.design/Posts/Keeping-a-Working-Copy-git-repo-synchronized-with-Shortcuts/</a></p>
+
+<p>Here are links to get the shortcuts directly-</p>
+
+<ol>
+<li> Pull Vault - <a href="https://www.icloud.com/shortcuts/fb56ee6f528743519d8947f2f242247c">https://www.icloud.com/shortcuts/fb56ee6f528743519d8947f2f242247c</a></li>
+<li> Sync Vault - <a href="https://www.icloud.com/shortcuts/16af459c4ad24ee49c80f905f74107c9">https://www.icloud.com/shortcuts/16af459c4ad24ee49c80f905f74107c9</a></li>
+<li> Commit Vault - <a href="https://www.icloud.com/shortcuts/16af459c4ad24ee49c80f905f74107c9">https://www.icloud.com/shortcuts/16af459c4ad24ee49c80f905f74107c9</a></li>
+<li> Push Vault - <a href="https://www.icloud.com/shortcuts/e44ce5d41a6d45d99dd43780db2788b4">https://www.icloud.com/shortcuts/e44ce5d41a6d45d99dd43780db2788b4</a></li>
+</ol>
+
+<p>Here is are brief screenshots showing how my automations are set up:
+<a href="https://imgur.com/a/w1K8BO9/">https://imgur.com/a/w1K8BO9/</a></p>
+
+<p>What you want to do after clicking the shortcuts links above to add them to your iOS/MacOS/iPadOS Shortcuts app (works on any Apple device) is click on automations (at the bottom of my screenshots, you can see it is blue).</p>
+
+<p>Once you do that, create a new automation by pressing on the blue + button at the top right (at least that is where it is on my iPad currently).</p>
+
+<p>Select “Create Personal Automation”.</p>
+
+<p>Scroll until you see “App” and select it.</p>
+
+<p>We are going to be making 2 automations… 1 for “is opened” and 1 for “is closed”.</p>
+
+<p>Keep “is opened” selected (should be checked by default). On “App” click “choose” and search for “Obsidian” and press “done”.</p>
+
+<p>Click “next” in the top right.</p>
+
+<p>You will be taken to the actions. You want to search for “Run Shortcut”. Select it.</p>
+
+<p>There will then be an open spot for which shortcut, click on that and select “pull vault”.</p>
+
+<p>Do the last 2 steps again. Search for “Run Shortcut”. Select It. In the open spot select “Sync Vault”.</p>
+
+<p>Press “next” and disable the “Ask before running”.</p>
+
+<p>THIS PART IS OPTIONAL- Tick “Notify when run” so you know that it has been done (visual confirmation).</p>
+
+<p>Press “Done”. Halfway done!</p>
+
+<p>Now repeat the above steps but instead of the “Pull Vault” and “Sync Vault” Shortcuts you want to select “Commit Vault” (this must be first!) and “Push Vault”.
+Everything else is the same except for when you are selecting whether the app is opened or closed make sure you select “is closed”.</p>
+
+<p>BAM! DONE! Congrats! Now you can keep Working Copy on your device but you don’t need to open it except in rare circumstances.</p>
+
+<p>Best part is you can make these home screen icons or whatever to also run them manually and they also can run from Spotlight Search. :)</p>
+
+<p>One thing Ryan wanted to make sure we knew is this:</p>
+
+<blockquote>
+<p>The automation will throw errors sometimes e.g. when you open and close the app in rapid succession, but I’ve never noticed any consequences.</p>
+</blockquote>
+
+<p>Now you are all set up to sync as many vaults as you want as the notification asks which vault you are syncing when you have more than one (tested myself).</p>
+
+<p>Thanks Ryan! Let me (or him) know if you guys have any questions!</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>How do you use obsidian as note-taking?</h2>
+<span class = "user">posted by: u/dhananjayporwal </span><span class = "numcomments">23 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/1182bfw/how_do_you_use_obsidian_as_notetaking/" target="_blank">(source)</a>
+<button onclick="toggles(215)">View full post</button><div id="215" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>Hi there, I have been using obsidian for the past year. I know some people use it more effectively than me. So, tell me how you organize your notes, what plugins do you use, how you make notes and pretty much everything about obsidian you wanna share with me.<br/>
+This is what I used:</p>
+
+<p>Theme: </p>
+
+<p><code>markdown
+Minimal
+</code></p>
+
+<p>Plugins:</p>
+
+<p><code>markdown
+Admonition
+Advanced Tables
+Banners
+Book Search
+Calendar
+Customizable Sidebar
+Dataview
+Enhancing Mindmap
+Homepage
+Hotkeys++
+Imgur Plugin
+Kanban
+LanguageTool Integration
+MAKE.md
+Mind Map
+Minimal Theme Setting
+Multi-Column Markdown
+Obsidian Git
+Periodic Notes
+Quick Add
+Tracker
+</code></p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>One semester - MSc ECE</h2>
+<span class = "user">posted by: u/sudo_nick </span><span class = "numcomments">24 comments </span><a href="https://i.redd.it/u8lq89vyxsia1.png" target="_blank">(source)</a>
+<button onclick="toggles(224)">View full post</button><div id="224" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>Just discovered the Excalidraw plugin for Obsidian. It’s WOW for Obsidian on my Mac but for iPad it’s extremely WOW. To draw with my apple pencil in Obsidian via Excalidraw is just what I need. Big shout out to Zsolt, my new hero. 👍</h2>
+<span class = "user">posted by: u/ultimate_solo </span><span class = "numcomments">22 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/s58d2o/just_discovered_the_excalidraw_plugin_for/" target="_blank">(source)</a>
+<button onclick="toggles(226)">View full post</button><div id="226" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>Finally found a way to prevent over-linking and use folders in a sustainable way</h2>
+<span class = "user">posted by: u/None </span><span class = "numcomments">21 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/1144rcf/finally_found_a_way_to_prevent_overlinking_and/" target="_blank">(source)</a>
+<button onclick="toggles(230)">View full post</button><div id="230" class="mdwrapper"><!-- SC_OFF --><div class="md"><h3>Problem 1: Over-linking</h3>
+
+<p>Here&#39;s an idea of what my notes used to look like (example is purely illustrative):</p>
+
+<blockquote>
+<h4>Lion</h4>
+
+<p>A <strong>lion</strong> is a kind of [[big cat]]. It is known to eat [[antelope]].</p>
+</blockquote>
+
+<p>The problem with this was as soon as my notes got a tiny bit bigger I got massive over-linking. I&#39;ve got <strong>classification</strong> and <strong>connection</strong> both running over links. This meant it was pretty difficult to get anything meaningful from my graph view.</p>
+
+<p>Separately...</p>
+
+<h3>Problem 2: How the heck do I use folders</h3>
+
+<p>I started out using folders for topics (i.e. groups of <strong>connected</strong> ideas). I soon realised that some ideas can belong to multiple topics, so that went out the window. I now use tags and links for expressing these connections because they are many-to-many, unlike a folder system, which is many-to-one.</p>
+
+<p>That left me with no folders and a very messy sidebar. I asked myself if I could be getting more use out of my sidebar.</p>
+
+<p>And then it hit me!</p>
+
+<h3>Folders for classification - never links</h3>
+
+<p>Under <code>Mammals/Big cats/Lion</code>:</p>
+
+<blockquote>
+<h4>Lion</h4>
+
+<p>A <strong>lion</strong> is a kind of big cat. It is known to eat [[antelope]].</p>
+</blockquote>
+
+<p>Folders are many-to-one, so they are naturally suited to classifying things. So let&#39;s tuck our note into its folder...</p>
+
+<p>Now the sidebar provides new value as a way to explore notes when you <em>don&#39;t know what you&#39;re expecting to find</em> !</p>
+
+<p>And let&#39;s cut out all those classification links to [[Big cat]]. This massively reduces boring links.</p>
+
+<p>Now the graph view makes the <em>interesting connections between topics more apparent</em> ! We can colour code our graph by folder too because every note has only one folder!</p>
+
+<p>Let me know what you think and if you have stumbled upon this system too!</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>How can I check out some really cool obsidian vaults to play around with?</h2>
+<span class = "user">posted by: u/BroskiMD </span><span class = "numcomments">4 comments </span><a href="https://www.reddit.com/r/ObsidianMD/comments/wxrtup/how_can_i_check_out_some_really_cool_obsidian/" target="_blank">(source)</a>
+<button onclick="toggles(243)">View full post</button><div id="243" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>Are you guys willing to share any resources where I can find cool obsidian vaults to download and play around with so I can compare it to my vault and see where I can improve? Maybe you guys have published some vaults by yourselves?</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Canvas has completely changed Obsidian for me. Now I feel like it's my second brain.</h2>
+<span class = "user">posted by: u/dhatereki </span><span class = "numcomments">100 comments </span><a href="https://i.redd.it/7naxan28nxga1.png" target="_blank">(source)</a>
+<button onclick="toggles(246)">View full post</button><div id="246" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+</div>
+<script src="../assets/js/script.js"></script>
+</body></html>

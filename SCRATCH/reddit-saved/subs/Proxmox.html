@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxmox</title>
+    <link href="https://fonts.googleapis.com/css?family=Sniglet|Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="container"><h1><span class = "subreddit">r/Proxmox </span></h1>
+<div class="post">
+<h2>How to: Proxmox 8 with Windows 11 vGPU (VT-d) Passthrough with Intel Alder Lake</h2>
+<span class = "user">posted by: u/Travel69 </span><span class = "numcomments">51 comments </span><a href="https://www.reddit.com/r/Proxmox/comments/14j6z64/how_to_proxmox_8_with_windows_11_vgpu_vtd/" target="_blank">(source)</a>
+<button onclick="toggles(5)">View full post</button><div id="5" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>I&#39;ve written a complete how-to guide for using Proxmox 8 with 12th Gen Intel CPUs to do virtual function (VF) passthrough to Windows 11 Pro VM. This allows you to run up to 7 VMs on the same host to share the GPU resources. </p>
+
+<p><a href="https://www.derekseaman.com/2023/06/proxmox-ve-8-windows-11-vgpu-vt-d-passthrough-with-intel-alder-lake.html">Proxmox VE 8: Windows 11 vGPU (VT-d) Passthrough with Intel Alder Lake</a></p>
+
+<p>&#x200B;</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Proxmox Gaming Rig</h2>
+<span class = "user">posted by: u/Past-Sky3552 </span><span class = "numcomments">22 comments </span><a href="https://www.reddit.com/r/Proxmox/comments/zrytli/proxmox_gaming_rig/" target="_blank">(source)</a>
+<button onclick="toggles(14)">View full post</button><div id="14" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>Hello everyone,</p>
+
+<p>Im currently looking for a proxmox build for my home server.</p>
+
+<p>I would like to run a Linux VM with Docker, something like NextCloud, my HomeAssistang and a Windows VM with GPU passthrough. But for the last part i have some questions. Do you guys have some hardware recommendations? Also i would like to know if I should go with Intel + Nvidia or full AMD or something else. </p>
+
+<p>Maybe someone knows some good value hardware I can use? </p>
+
+<p>The budget would be around 1k€. Also it shouldn&#39;t be that power hungry.</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Remote gaming on proxmox VM?</h2>
+<span class = "user">posted by: u/Voeal </span><span class = "numcomments">33 comments </span><a href="https://www.reddit.com/r/Proxmox/comments/138yw0g/remote_gaming_on_proxmox_vm/" target="_blank">(source)</a>
+<button onclick="toggles(66)">View full post</button><div id="66" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>Basically i want to setup proxmox vm with windows 11 with GPU passthrough for gaming. And game remotely from my linux laptop. Can i just use VNC for it or i better go with something like moonlight/sunshine? It will be connected via ethernet in local network.</p>
+
+<p>Why i dont just build dedicated windows gaming machine? Because im flutter developer and i need macos, windows and linux for development. My endgame goal is to use macos in mac mini m1 and windows 11 in proxmox vm remotely from my linux laptop.</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>New proxmox setup, any tips?</h2>
+<span class = "user">posted by: u/MarcusBuer </span><span class = "numcomments">70 comments </span><a href="https://i.redd.it/0org8ki7znxa1.png" target="_blank">(source)</a>
+<button onclick="toggles(71)">View full post</button><div id="71" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>Help me configuring my first Proxmox VE system</h2>
+<span class = "user">posted by: u/bello_raviolo </span><span class = "numcomments">34 comments </span><a href="https://www.reddit.com/r/Proxmox/comments/12kmhj5/help_me_configuring_my_first_proxmox_ve_system/" target="_blank">(source)</a>
+<button onclick="toggles(102)">View full post</button><div id="102" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>Hello all,</p>
+
+<p>I&#39;m dismissing my desktop pc and I want to convert it into a Proxmox VE system, these are the specs:</p>
+
+<p>i7 6700k, 16GB RAM, 6 SATA sockets.</p>
+
+<p>These are the services i&#39;m currently running and that i would migrate to the Proxmox system:</p>
+
+<ul>
+<li>Nginx</li>
+<li>Nextcloud</li>
+<li>Samba</li>
+<li>Matrix-Synapse</li>
+<li>SearxNG</li>
+<li>Piped</li>
+<li>Wordpress</li>
+<li>Static Website</li>
+<li>Mailserver (will probably leave this one on the VPS)</li>
+</ul>
+
+<p>Things i don&#39;t currently run and I&#39;m planning to implement:</p>
+
+<ul>
+<li>Some backup system for my laptop</li>
+</ul>
+
+<p>I have a few questions especially regarding storage, these are the layouts i thought of:</p>
+
+<ul>
+<li>2x 1TB SSD for Proxmox OS and VMs - Zfs mirroring</li>
+<li>4x 2TB HDD for storage - Zfs RAIDz1</li>
+</ul>
+
+<p>or</p>
+
+<ul>
+<li>6x 1TB SSD for everything - Zfs Raidz1</li>
+</ul>
+
+<p>Does any of this make sense?</p>
+
+<p>Are 16GB of RAM enough to run both Zfs and VMs?</p>
+
+<p>&#x200B;</p>
+
+<p>About CPU overprovisioning:</p>
+
+<p>Realistically how many vCore can I give to VMs  with an i7 6700k?</p>
+
+<p>&#x200B;</p>
+
+<p>Sorry for my basic english, i&#39;m a non-native speaker.</p>
+
+<p>&#x200B;</p>
+
+<p>Edit: grammar</p>
+</div><!-- SC_ON --></div>
+</div>
+</div>
+<script src="../assets/js/script.js"></script>
+</body></html>

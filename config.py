@@ -1,7 +1,7 @@
-client_id='clientid here'
-client_secret='client secret here'
-user_agent='user agent here'
-username='username here'
-password='password here'
+client_id='wU3MQkzHoTeqJ3hzC89Nig'
+client_secret='eoQiWv6V2WghStNGsds-eJJw9vrwNw'
+user_agent='Saved posts scraper by /u/equalfights'
+username='equalfights'
+password='Punkwe1ght!'
 # optionally set a custom save directory below
-#savedir='your custom directory here'
+savedir='~/SCRATCH/reddit-saved'

@@ -1,0 +1,178 @@
+</div>
+<script src="../assets/js/script.js"></script>
+</body></html><div class="post">
+<h2>What are deepdream images? How do I make my own? Can I do audio/video? Why are there dogs everywhere?!</h2>
+<span class = "user">posted by: u/Fred_Flintstone </span>
+<span class = "numcomments">255 comments </span>
+<a href="https://www.reddit.com/r/deepdream/comments/3cawxb/what_are_deepdream_images_how_do_i_make_my_own/" target="_blank">(source)</a>
+<button onclick="toggles('3cawxb')">View full post</button>
+<div id="3cawxb" class="mdwrapper">
+<!-- SC_OFF --><div class="md"><h2>Deepdream images?</h2>
+
+<p>Deep Learning is a new field within Machine Learning. In the past 4 years researchers have been training neural networks with a very large <a href="http://343hz.com/content/images/2014/Jan/multilayer_1-1.gif">number of layers</a>. Algorithms are learning how to classify images to a much greater accuracy than before: you can give them an image of a cat or a dog and they will be able to tell the difference. Traditionally this has been nearly impossible for computers but easy for humans.</p>
+
+<p>Deep Learning algorithms are trained by giving them a huge number of images, and telling them what object is in each image. Once it has seen (e.g.) a hundred types of dog heads 1000 times from a hundred angles, it has been &#39;trained&#39;. Now you can give it new images and it will spot dog heads within the images, or tell you that there are none at all. It also can say how unsure it is.</p>
+
+<p>It was always hard to tell what the algorithms were &#39;seeing&#39; or &#39;thinking&#39; when we gave them new images. <a href="http://googleresearch.blogspot.co.uk/2015/06/inceptionism-going-deeper-into-neural.html">So in June 2015 Google Engineers released a method for visualising what the algorithms saw.</a>. Towards the end of June 2015 they <a href="https://github.com/google/deepdream">released their code</a>, so people could see what the trained neural networks were seeing on any image they wanted. </p>
+
+<p>We created this sub to put these images in. It also is fast becoming the place to discuss techniques/methods and try out totally new ideas, such as video</p>
+
+<hr/>
+
+<hr/>
+
+<h2>How do I make my own?</h2>
+
+<h3>●●● <strong>Without</strong> programming experience: ●●●</h3>
+
+<p>Note that this is popular across the whole internet at the moment, both of these have huge queues (4000 for the second one at time of writing).</p>
+
+<ol>
+<li><p><a href="http://dreamscopeapp.com">http://dreamscopeapp.com</a> by <a href="/u/mippie_moe">/u/mippie_moe</a>. &quot;tried to engineer it to be much faster/more scalable&quot;, aiming for &lt;10s wait time. They have an iphone app here too <a href="https://dreamscopeapp.com/app">https://dreamscopeapp.com/app</a></p></li>
+<li><p><a href="http://deepdream.in">http://deepdream.in</a> by <a href="/u/thegenome">/u/thegenome</a></p></li>
+<li><p><a href="http://deepdreamer.io">http://deepdreamer.io</a></p></li>
+<li><p>(possibly NSFW) <a href="http://psychic-vr-lab.com/deepdream/">http://psychic-vr-lab.com/deepdream/</a></p></li>
+<li><p>This site might work if the above is down for whatever reason: (possibly NSFW) <a href="http://deepdream.pictures/static/#/">http://deepdream.pictures/static/#/</a></p></li>
+<li><p><a href="http://deepdream.akkez.ru/">http://deepdream.akkez.ru/</a> by <a href="/u/akkez">/u/akkez</a></p></li>
+<li><p>New app: <a href="http://nezibo.com/dreamception">http://nezibo.com/dreamception</a></p></li>
+<li><p><a href="http://deepdreamit.com/">http://deepdreamit.com/</a></p></li>
+<li><p><a href="http://dreamingwith.us/">http://dreamingwith.us/</a> by <a href="/u/zxctypo">/u/zxctypo</a></p></li>
+<li><p><a href="http://deepdreamr.com/">http://deepdreamr.com/</a></p></li>
+<li><p>Desktop Mac Software &quot;fast and cool&quot; <a href="http://realmacsoftware.com/deepdreamer/">http://realmacsoftware.com/deepdreamer/</a></p></li>
+<li><p>Check out the subreddit where people fulfill your requests for you! just give them the image. <strong><a href="/r/deepdreamrequests">/r/deepdreamrequests</a></strong>. You can also summon <a href="/u/DeepDreamBot">/u/DeepDreamBot</a> in the comments anywhere on reddit. details: <a href="http://redd.it/3cbi84">http://redd.it/3cbi84</a></p></li>
+<li><p>Other sites: (SUGGESTIONS WELCOME)</p></li>
+</ol>
+
+<p><strong>OR</strong> You can try running some code on your own computer even without knowing much programming. This guy has done all the work, packaged it all up as simply as possible, and made a guide for running it: <a href="http://ryankennedy.io/running-the-deep-dream/">http://ryankennedy.io/running-the-deep-dream/</a> .</p>
+
+<h3>●●● <strong>With</strong> programming experience (python): ●●●</h3>
+
+<h4>Mac OS X:</h4>
+
+<p>You need an NVidia Graphics card GPU that is on <a href="https://developer.nvidia.com/cuda-gpus">this list</a> in order to be able to run CUDA/Caffe. Find out your GPU by clicking &#39;About Your Mac&#39; &gt; &#39;More Info...&#39; &gt; Graphics. Mine was Intel, so I cant use CUDA/Caffe. If you cant use CUDA then its possible to do this stuff on Caffee with the CPU rather than GPU, but its much much much much much slower, and.... </p>
+
+<p><em>If you don&#39;t have NVidia graphics card then your best bet is using an Amazon instance with an already set up AMI. This is maybe the fastest way of all to setup deepdream. However you will need to create an account and pay possible a couple $ for server costs with your credit/debit card. Best guide available:</em> <strong><a href="https://github.com/graphific/dl-machine">https://github.com/graphific/dl-machine</a></strong>. EDIT: also <a href="http://www.pyimagesearch.com/2015/07/06/bat-country-an-extendible-lightweight-python-package-for-deep-dreaming-with-caffe-and-convolutional-neural-networks/#show_and_tell">this guy here is using an Amazon EC2 g2.2xlarge and has written a guide on getting it up and running really fast</a></p>
+
+<p>If you have NVidia graphics card and can run CUDA:</p>
+
+<p>(<strong>An alternative guide to mine below is here</strong>: <a href="https://gist.github.com/robertsdionne/f58a5fc6e5d1d5d2f798">https://gist.github.com/robertsdionne/f58a5fc6e5d1d5d2f798</a> . It uses homebrew to install CUDA, which will save you some time. Some say its working but others have problems.)</p>
+
+<ol>
+<li><p><a href="http://continuum.io/downloads%5D.%20(You%20will%20use%20this%20as%20your%20python%20source%20and%20it%20has%20libraries%20like%20SciPy,%20NumPy,%20IPython%20etc.">Install Anaconda</a></p></li>
+<li><p>If you do not have Homebrew package manager then install it now: <a href="http://brew.sh/">http://brew.sh/</a> . If you are already using another package manager like macports... idk what is best for you - multiple package managers can clash sometimes.</p></li>
+<li><p><a href="https://developer.apple.com/xcode/downloads/">Install XCode from Apple</a> if you dont have it already. v6.4 is fine.</p></li>
+<li><p>Check you have clang by typing into your terminal: &#39;clang --help&#39;. Hopefully you have it already but if you dont have it then <a href="http://catch-0x16.blogspot.co.uk/2013/07/up-to-date-clang-with-homebrew-on-mac.html">try installing it through homebrew (untested)</a>.</p></li>
+<li><p>Follow <a href="http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-mac-os-x/#axzz3f7lgKr6V">these steps</a> to download CUDA <strong>7</strong> from Nvidia. If your Mac is moderately new then this should not be too tricky.</p></li>
+</ol>
+
+<ul>
+<li><p>if after running &#39;xcode-select --install&#39; your Xcode is updated then DO run that same command again.</p></li>
+<li><p>if you have the prerequisites sorted then <a href="https://developer.nvidia.com/cuda-downloads">download the CUDA dmg from here</a> under the Mac OS X tab. Once downloaded run CUDAMacOSXInstaller. </p></li>
+<li><p>If you get this error: <em>“CUDAMacOSXInstaller” is an application downloaded from the Internet.</em> Then go to  System Preferences &gt; Security &amp; Privacy &gt; General -&gt; (unlock) -&gt; Allow apps downloaded from anywhere. Then run CUDAMacOSXInstaller again.</p></li>
+<li><p>When prompted install the Driver and Toolkit. Samples are optional but worth getting to test installation. </p></li>
+<li><p>Once complete (takes 10mins+) test the installation by taking the <a href="http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-mac-os-x/#verification">verification steps</a>.</p></li>
+</ul>
+
+<p>(CUDA verification steps tldr):</p>
+
+<pre><code>(run these in terminal):
+export PATH=/Developer/NVIDIA/CUDA-7.0/bin:$PATH
+export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-7.0/lib:$DYLD_LIBRARY_PATH
+
+#check that this gives some sort of output and that driver works
+kextstat | grep -i cuda
+
+# now test compiler, does this give output?:
+nvcc -V
+# now test complier by building some samples:
+cd /Developer/NVIDIA/CUDA-7.0/samples
+# now run these _individually_ and check that there are no errors. I used sudo for each...
+make -C 0_Simple/vectorAdd
+make -C 0_Simple/vectorAddDrv
+make -C 1_Utilities/deviceQuery
+make -C 1_Utilities/bandwidthTest
+
+# now we check runtime. 
+cd bin/x86_64/darwin/release
+./deviceQuery
+# check output matches Figure 1 in &#39;verification steps&#39; link above
+./bandwidthTest
+# check output matches Figure 2 in &#39;verification steps&#39; link above
+</code></pre>
+
+<p>(numbering is broken - next number should be 6, not 1):</p>
+
+<ol>
+<li><p><a href="http://caffe.berkeleyvision.org/installation.html">Install Caffe&#39;s dependencies, then Caffe</a>. Also use some of the tips <a href="https://gist.github.com/robertsdionne/f58a5fc6e5d1d5d2f798">here</a>. Quite a few steps in this process... good luck!</p></li>
+<li><p>Get Google <a href="https://developers.google.com/protocol-buffers/">protobuf</a>.</p></li>
+<li><p>Follow the final steps here to run the actual code: <a href="https://github.com/google/deepdream/blob/master/dream.ipynb">https://github.com/google/deepdream/blob/master/dream.ipynb</a></p></li>
+</ol>
+
+<h4>Unix:</h4>
+
+<p><a href="/u/Cranial_Vault">/u/Cranial_Vault</a> has <a href="https://www.reddit.com/r/deepdream/comments/3cd1yf/howto_install_on_ubuntulinux_mint_including_cuda/">written a good guide here for Ubuntu</a>.</p>
+
+<h4>Windows:</h4>
+
+<p><a href="/u/senor_prickneck">/u/senor_prickneck</a> has written a <a href="https://www.reddit.com/r/deepdream/comments/3c2s0v/newbie_guide_for_windows/">thorough guide for installing on Windows</a>. (WARNING it is recommended you download OpenSSH from a trusted source that isn&#39;t sourceforge when you get to that step. Sourceforge may be compromised and file might be malware. Thanks <a href="/u/seanv">/u/seanv</a> for the tip.)</p>
+
+<hr/>
+
+<hr/>
+
+<h2>Why are there so many dog heads, Chalices, Japanese-style buildings and eyes being imagined by these neural networks?</h2>
+
+<p>Nearly all of these images are being created by &#39;reading the mind&#39; of neural networks that were trained on the <a href="http://image-net.org/about-overview">ImageNet dataset</a>. This dataset has lots of different types of images within it, but there happen to be a ton of dogs, chalices, etc...</p>
+
+<p>If you were to train your own neural network with lots of images of hands then you could generate your own deepdream images from this net and see everything be created from hands.</p>
+
+<p>People have started to use different datasets already. Here somebody is using MIT&#39;s places data: <a href="https://www.youtube.com/watch?v=6IgbMiEaFRY">https://www.youtube.com/watch?v=6IgbMiEaFRY</a></p>
+
+<hr/>
+
+<hr/>
+
+<h2>Can this be done on audio? video?</h2>
+
+<p>Yes. To make a video you can run the code on each individual frame of the video then stitch them together afterwards. But there are more efficient ways discussed <a href="https://www.reddit.com/r/deepdream/comments/3cadj8/people_are_doing_videos_incorrectly/">in this thread</a>. The best resource for learning about this is here: <a href="https://github.com/graphific/DeepDreamVideo">https://github.com/graphific/DeepDreamVideo</a></p>
+
+<p>If you wish to make one of those zoom-into-an-image-really-far gifs like <a href="http://i.imgur.com/PDdR6Qs.gifv">this one</a> then you should follow the guide here: (TODO: guide link)</p>
+
+<p>To perform this on audio you need to really know what you are doing. Audio works better with RNNs than CNNs. You will need to create a large corpus of simple music to train your RNN on.</p>
+
+<hr/>
+
+<hr/>
+
+<h2>Tips &amp; Tools</h2>
+
+<ul>
+<li><p>&#39;layers&#39;: <a href="http://redd.it/3cby7m">http://redd.it/3cby7m</a> </p></li>
+<li><p>&#39;layers&#39;: <a href="http://redd.it/3ccm13">http://redd.it/3ccm13</a></p></li>
+<li><p>Generate animations/gifs: <a href="https://github.com/samim23/DeepDreamAnim">https://github.com/samim23/DeepDreamAnim</a></p></li>
+<li><p>easily configure deepdream variables with <a href="https://github.com/kesara/deepdreamer">deepdreamer</a></p></li>
+</ul>
+
+<p>(Suggestions welcome)</p>
+
+<hr/>
+
+<hr/>
+
+<h2>Welcome to the sub!</h2>
+
+<p>If you can think of anything else to go into the sticky please do post below!</p>
+
+<h3>News:</h3>
+
+<ul>
+<li><a href="http://redd.it/3ceg02"><em>number 1 trending sub</em> of July 7th</a> and <a href="http://redditmetrics.com/r/deepdream">&quot;fastest growing non-default subreddit yesterday, beating out 673,836 other subreddits&quot;</a></li>
+</ul>
+
+<hr/>
+
+<hr/>
+</div><!-- SC_ON -->
+</div>
+</div>
+    

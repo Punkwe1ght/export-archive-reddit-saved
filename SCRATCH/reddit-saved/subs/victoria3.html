@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>victoria3</title>
+    <link href="https://fonts.googleapis.com/css?family=Sniglet|Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="container"><h1><span class = "subreddit">r/victoria3 </span></h1>
+<div class="post">
+<h2>I found a value that is invisible in any tooltip but very important to know : "convoy cost multiplier"</h2>
+<span class = "user">posted by: u/rich_god </span><span class = "numcomments">78 comments </span><a href="https://www.reddit.com/r/victoria3/comments/ypg7pq/i_found_a_value_that_is_invisible_in_any_tooltip/" target="_blank">(source)</a>
+<button onclick="toggles(380)">View full post</button><div id="380" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>I was looking at the code to mod a new good in the game, and I found a value that is associated with each good. It is &quot;convoy_cost_multiplier&quot;, very much correlated to &quot;traded_quantity&quot;. These values define how much goods one level of trade route will trade, and how much convoys it costs.</p>
+
+<p>It&#39;s a very important value to know what goods to trade and what to produce and consume in your country. It&#39;s pretty intuitive that it&#39;s easier to trade grain and clothes than airplanes and tanks, this value represents how heavy and large the good is. That is a very impactful information for your whole economy, and I don&#39;t think you can access it anywhere in the game which is kinda crazy.</p>
+
+<p>Here are the value for each tradable good, the default values are 1 cost multiplier, 10 traded units per level. I also put the trade absolute efficiency, which is the number of traded units per 1 base convoy, and trade value efficiency, which is the total value of the traded goods per base convoys. Weight is my own label to differentiate how easy it is to trade a certain good.</p>
+
+<p>&#x200B;</p>
+
+<table><thead>
+<tr>
+<th align="left">Goods</th>
+<th align="left">Convoy cost multiplier</th>
+<th align="left">Traded quantity</th>
+<th align="left">Trade  absolute efficiency</th>
+<th align="left">Trade value efficiency</th>
+<th align="left">Weight</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">Grain</td>
+<td align="left">0.25</td>
+<td align="left">20</td>
+<td align="left">80</td>
+<td align="left">1600</td>
+<td align="left">Extremely light</td>
+</tr>
+<tr>
+<td align="left">Fish</td>
+<td align="left">0.25</td>
+<td align="left">20</td>
+<td align="left">80</td>
+<td align="left">1600</td>
+<td align="left">Extremely light</td>
+</tr>
+<tr>
+<td align="left">Fabric</td>
+<td align="left">0.25</td>
+<td align="left">20</td>
+<td align="left">80</td>
+<td align="left">1600</td>
+<td align="left">Extremely light</td>
+</tr>
+<tr>
+<td align="left">Wood</td>
+<td align="left">0.25</td>
+<td align="left">20</td>
+<td align="left">80</td>
+<td align="left">1600</td>
+<td align="left">Extremely light</td>
+</tr>
+<tr>
+<td align="left">Groceries</td>
+<td align="left">0.5</td>
+<td align="left">15</td>
+<td align="left">30</td>
+<td align="left">900</td>
+<td align="left">Very Light</td>
+</tr>
+<tr>
+<td align="left">Clothes</td>
+<td align="left">0.5</td>
+<td align="left">15</td>
+<td align="left">30</td>
+<td align="left">900</td>
+<td align="left">Very Light</td>
+</tr>
+<tr>
+<td align="left">Furniture</td>
+<td align="left">0.5</td>
+<td align="left">15</td>
+<td align="left">30</td>
+<td align="left">900</td>
+<td align="left">Very Light</td>
+</tr>
+<tr>
+<td align="left">Paper</td>
+<td align="left">0.5</td>
+<td align="left">15</td>
+<td align="left">30</td>
+<td align="left">900</td>
+<td align="left">Very Light</td>
+</tr>
+<tr>
+<td align="left">Meat</td>
+<td align="left">0.75</td>
+<td align="left">15</td>
+<td align="left">20</td>
+<td align="left">600</td>
+<td align="left">Light</td>
+</tr>
+<tr>
+<td align="left">Fruit</td>
+<td align="left">0.75</td>
+<td align="left">15</td>
+<td align="left">20</td>
+<td align="left">600</td>
+<td align="left">Light</td>
+</tr>
+<tr>
+<td align="left">Liquor</td>
+<td align="left">0.75</td>
+<td align="left">15</td>
+<td align="left">20</td>
+<td align="left">600</td>
+<td align="left">Light</td>
+</tr>
+<tr>
+<td align="left">Wine</td>
+<td align="left">0.75</td>
+<td align="left">10</td>
+<td align="left">13</td>
+<td align="left">650</td>
+<td align="left">Lightish</td>
+</tr>
+<tr>
+<td align="left">Tea</td>
+<td align="left">0.75</td>
+<td align="left">10</td>
+<td align="left">13</td>
+<td align="left">650</td>
+<td align="left">Lightish</td>
+</tr>
+<tr>
+<td align="left">Coffee</td>
+<td align="left">0.75</td>
+<td align="left">10</td>
+<td align="left">13</td>
+<td align="left">650</td>
+<td align="left">Lightish</td>
+</tr>
+<tr>
+<td align="left">Sugar</td>
+<td align="left">0.75</td>
+<td align="left">15</td>
+<td align="left">20</td>
+<td align="left">600</td>
+<td align="left">Light</td>
+</tr>
+<tr>
+<td align="left">Tobacco</td>
+<td align="left">0.75</td>
+<td align="left">10</td>
+<td align="left">13</td>
+<td align="left">520</td>
+<td align="left">Lightish</td>
+</tr>
+<tr>
+<td align="left">Opium</td>
+<td align="left">0.75</td>
+<td align="left">10</td>
+<td align="left">13</td>
+<td align="left">650</td>
+<td align="left">Lightish</td>
+</tr>
+<tr>
+<td align="left">Automobiles</td>
+<td align="left">1</td>
+<td align="left">8</td>
+<td align="left">8</td>
+<td align="left">640</td>
+<td align="left">Heavyish</td>
+</tr>
+<tr>
+<td align="left">Telephones</td>
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">10</td>
+<td align="left">700</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Radios</td>
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">10</td>
+<td align="left">800</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Luxury clothes</td>
+<td align="left">0.75</td>
+<td align="left">10</td>
+<td align="left">13</td>
+<td align="left">800</td>
+<td align="left">Lightish</td>
+</tr>
+<tr>
+<td align="left">Luxury Furniture</td>
+<td align="left">0.75</td>
+<td align="left">10</td>
+<td align="left">13</td>
+<td align="left">800</td>
+<td align="left">Lightish</td>
+</tr>
+<tr>
+<td align="left">Porcelain</td>
+<td align="left">0.75</td>
+<td align="left">10</td>
+<td align="left">13</td>
+<td align="left">933</td>
+<td align="left">Lightish</td>
+</tr>
+<tr>
+<td align="left">Clippers</td>
+<td align="left">0.25</td>
+<td align="left">7</td>
+<td align="left">28</td>
+<td align="left">1680</td>
+<td align="left">Very light</td>
+</tr>
+<tr>
+<td align="left">Steamers</td>
+<td align="left">0.25</td>
+<td align="left">7</td>
+<td align="left">28</td>
+<td align="left">1680</td>
+<td align="left">Very light</td>
+</tr>
+<tr>
+<td align="left">Silk</td>
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">10</td>
+<td align="left">400</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Dye</td>
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">10</td>
+<td align="left">400</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Sulfur</td>
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">10</td>
+<td align="left">500</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Coal</td>
+<td align="left">0.75</td>
+<td align="left">15</td>
+<td align="left">20</td>
+<td align="left">600</td>
+<td align="left">Light</td>
+</tr>
+<tr>
+<td align="left">Iron</td>
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">10</td>
+<td align="left">400</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Lead</td>
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">10</td>
+<td align="left">400</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Hardwood</td>
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">10</td>
+<td align="left">400</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Rubber</td>
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">10</td>
+<td align="left">400</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Oil</td>
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">10</td>
+<td align="left">400</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Tools</td>
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">10</td>
+<td align="left">400</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Engines</td>
+<td align="left">2</td>
+<td align="left">8</td>
+<td align="left">4</td>
+<td align="left">240</td>
+<td align="left">Very heavy</td>
+</tr>
+<tr>
+<td align="left">Steel</td>
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">10</td>
+<td align="left">500</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Glass</td>
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">10</td>
+<td align="left">400</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Fertilizer</td>
+<td align="left">1</td>
+<td align="left">15</td>
+<td align="left">15</td>
+<td align="left">750</td>
+<td align="left">Lightish</td>
+</tr>
+<tr>
+<td align="left">Explosives</td>
+<td align="left">1.5</td>
+<td align="left">8</td>
+<td align="left">5.3</td>
+<td align="left">270</td>
+<td align="left">Heavy</td>
+</tr>
+<tr>
+<td align="left">Artillery</td>
+<td align="left">1.5</td>
+<td align="left">7</td>
+<td align="left">4.7</td>
+<td align="left">330</td>
+<td align="left">Heavy</td>
+</tr>
+<tr>
+<td align="left">Tanks</td>
+<td align="left">2</td>
+<td align="left">6</td>
+<td align="left">3</td>
+<td align="left">240</td>
+<td align="left">Extremely heavy</td>
+</tr>
+<tr>
+<td align="left">Aeroplanes</td>
+<td align="left">2</td>
+<td align="left">6</td>
+<td align="left">3</td>
+<td align="left">240</td>
+<td align="left">Extremely heavy</td>
+</tr>
+<tr>
+<td align="left">manowars</td>
+<td align="left">0.5</td>
+<td align="left">5</td>
+<td align="left">10</td>
+<td align="left">700</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">ironclad</td>
+<td align="left">0.5</td>
+<td align="left">5</td>
+<td align="left">10</td>
+<td align="left">800</td>
+<td align="left">Average</td>
+</tr>
+<tr>
+<td align="left">Fine art</td>
+<td align="left">1</td>
+<td align="left">5</td>
+<td align="left">5</td>
+<td align="left">1000</td>
+<td align="left">Heavy</td>
+</tr>
+</tbody></table>
+
+<p>&#x200B;</p>
+
+<p>Some observations :</p>
+
+<ul>
+<li>Explosives are heavy and fertiliser are light. That means it&#39;s better to produce and consume  the explosives you need in your own market, and adjust the fertiliser price with imports and exports.</li>
+<li>Groceries are the easiest luxury food item to be traded. If you can produce sugar on your market, you can import fish and grain and export groceries to the world.</li>
+<li>Coal is the lightest industrial good, which makes it a good trade option. That means that if you need coal and iron, it&#39;s usually better to build an iron mine and trade the coal. Same if you overproduce them, it&#39;s better to export coal and find use for iron in your country. That also explains why it&#39;s easier to steal your cheap coal production than your iron or lead production.</li>
+<li>Wood and fabric are incredibly easy to trade. I understand now why in most of my games I don&#39;t produce them and only import. Exporting them is very efficient too, and with grain and fish they should probably be your first trade routes for some easy money.</li>
+<li>Silk and dye are not very good to be traded. That means that if you can produce them, you should make it into another good to export (like clothes) and not export it directly. If you don&#39;t produce it, a colony can be useful, or importing clothes and not producing them.</li>
+<li>Porcelain is the most tradable good for the luxury item needs (which is the most important need with art at very high sol).</li>
+<li>Engines are incredibly hard to trade. That makes them probably the most crucial piece of your production chain to produce in your market (after electricity, which is not tradable). Subsidising this industry if it&#39;s not profitable is a very good idea, but any overproduction will be difficult to export.</li>
+<li>Automobiles are a bit heavy but twice less than engines, and only 20% more than telephones.</li>
+<li>Clippers and steamers are insanely cheap to trade.</li>
+<li>Art is heavy but have high value for each level of trade. That means it&#39;s not easy to start it (you need a high demand in the importing country) but can be very profitable.</li>
+<li>One tank is about as easy to trade as 27 units of grain (while costing 4 times as much), so per pound traded it&#39;s 7 times more costly. You probably don&#39;t want to trade tanks or aeroplanes.</li>
+</ul>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>Dr. Economy Part 2: The In-Game Mechanics of Wealth Creation Through Debt</h2>
+<span class = "user">posted by: u/Merrovech </span><span class = "numcomments">61 comments </span><a href="https://www.reddit.com/r/victoria3/comments/ym669a/dr_economy_part_2_the_ingame_mechanics_of_wealth/" target="_blank">(source)</a>
+<button onclick="toggles(386)">View full post</button><div id="386" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>In my previous post, I was a bit on the light side with details about how debt becomes money in game. Normally when I get going about the logistics of monetary policy, people&#39;s eyes glaze over and I stop getting invited to social events. I figured it would be the same here but I&#39;m writing for Victoria 3 Players and really should have realized that y&#39;all are just as weird as me.</p>
+
+<p>To understand how your debt is your money printer in-game, you&#39;ve got to understand where your credit limit comes from. Go into any building, hover over the cash reserves and the tool tip will tell you that your credit limit is the sum of the cash reserves of your buildings. This is not an abstraction layer. Your debt comes directly from the cash your buildings have stockpiled. I tied credit limit to gdp in the first post because gdp is either the total productive output or consumption of an economy and building cash reserves are exactly that. You don&#39;t own these buildings, whoever has an ownership share does so you have to pay the money back to those pops.</p>
+
+<p>Before getting to how this creates wealth and growth, I want to go on a quick tangent to why the common pushback I got that &quot;x event will cause you to implode if you use this strategy&quot; is incorrect. No event in the game immediately reduces the cash reserves of your buildings. Your credit limit will therefore not drop and make you default. Just let the game run a day or two, pause and look to l see if any buildings are no longer profitable then fix them. Maybe scale back construction if the degree of profitability has declined to keep interest and credit limit scaling balanced.</p>
+
+<p>Back to wealth creation from debt. We&#39;ve established that you take out loans from your pops so it makes sense that you pay interest to those pops. You can hover over the income of a pop with a an ownership share to get an itemized breakdown and, sure enough, &quot;interest&quot; is on it. This is the true joy of debt financed expansion. With higher wages, your pops can buy more goods and services. More demand for goods and services means higher prices. Higher prices mean you can build more profitable buildings and keep your credit limit growing. For maximum effect, go full capitalommunist and make every worker a member of the board. </p>
+
+<p>The more in debt you go, the more money your pops have to patronize profitable buildings and the more in debt you can go. You also benefit from economies of scale with this. Taxes and temporary investment pool transfers scale with the numbers of profitable buildings you have and so you can offset more of your expenses, allowing you to grow faster. Your debt, which is functionally just a ledger entry, becomes tangible productive output when you deploy it into the economy instead of holding it in reserve. This is your money printer. Increasing your debt load increases the money supply in the economy and balancing the budget takes money out of the economy. The lack of private industry in the game means our money printer works slightly different to the irl Fed&#39;s but it is still there.</p>
+
+<p>Will paradox &quot;fix&quot; this? No. It&#39;s a fundamental feature of the game&#39;s economic model and it is working exactly as intended. The only red current situation notification in the game is is &quot;Unused Construction Production&quot; because paradox expects you to always be building something. Ever wonder how the Dutch managed to fend off France and Pussia, beat most of the world to the colonial game and found the most profitable business that ever has or ever will exist? They did it by letting go of a balanced budget in favor of debt financed growth 200ish years ahead of the rest of the world. They are still one of the wealthiest nations in the world today despite their size because the returns from this gamble have been compounding for around 500 years by this point</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>America back to Americans, the real Americans</h2>
+<span class = "user">posted by: u/Volodio </span><span class = "numcomments">95 comments </span><a href="https://i.redd.it/nxqtus3eekx91.jpg" target="_blank">(source)</a>
+<button onclick="toggles(391)">View full post</button><div id="391" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+<div class="post">
+<h2>Instead of circlejerking about the leak, lets read history books about the period.</h2>
+<span class = "user">posted by: u/entirelyalive </span><span class = "numcomments">54 comments </span><a href="https://www.reddit.com/r/victoria3/comments/u6zwp5/instead_of_circlejerking_about_the_leak_lets_read/" target="_blank">(source)</a>
+<button onclick="toggles(408)">View full post</button><div id="408" class="mdwrapper"><!-- SC_OFF --><div class="md"><p>In this thread, post good books set in the period 1836-1936. Give name, author, and whether it is straight history, biography, historical fiction, or victorian era fiction. Then discuss other people&#39;s recommendations. No leak chat, only good books.</p>
+</div><!-- SC_ON --></div>
+</div>
+<div class="post">
+<h2>What is your wildest mod idea? I'm thinking Avatar</h2>
+<span class = "user">posted by: u/Savolainen5 </span><span class = "numcomments">54 comments </span><a href="/r/victoria3/comments/xvohvz/what_is_your_wildest_mod_idea_im_thinking_avatar/ir2bs05/" target="_blank">(source)</a>
+<button onclick="toggles(418)">View full post</button><div id="418" class="mdwrapper"><div class="md"><p>There&#39;s actually already an Avatar mod planned on the Vic3 Mod Co-op Discord server (<a href="https://discord.gg/hgCPVpmp8v">https://discord.gg/hgCPVpmp8v</a>) which you may be interested in checking out!</p>
+</div></div>
+</div>
+<div class="post">
+<h2>Are there any good info-dumps for the Victorian time period?</h2>
+<span class = "user">posted by: u/Baisteach </span><span class = "numcomments">42 comments </span><a href="/r/victoria3/comments/wulmqo/are_there_any_good_infodumps_for_the_victorian/ilajl47/" target="_blank">(source)</a>
+<button onclick="toggles(440)">View full post</button><div id="440" class="mdwrapper"><div class="md"><p>I actually put together a list of video essays for my friends to learn about the period:</p>
+
+<p>The Congress of Vienna, <a href="https://www.youtube.com/watch?v=QtOXq9SwarQ">Part 1</a> and <a href="https://www.youtube.com/watch?v=OGJHE6O7Mhk">Part 2</a> from Historia Civilis. This peace conference is <em>critical</em> to understanding Victorian Era European politics.</p>
+
+<p><a href="https://www.youtube.com/watch?v=dPUVlVmwHc0">The Decembrists: Revolt Against the Tsar</a> from Epic History TV. </p>
+
+<p><a href="https://www.youtube.com/watch?v=dPUVlVmwHc0">1848: Europe&#39;s Year of Revolution</a> from Epic History TV. This is probably the single biggest event in the 19th century that doesn&#39;t get talked about nearly enough.</p>
+
+<p><a href="https://www.youtube.com/watch?v=xVISzFmBiPU">Franco-Prussian War</a> from The Armchair Historian. Critical to the formation of both Germany and Italy.</p>
+
+<p><a href="https://www.youtube.com/watch?v=n9MNGdqsHKE">The Meiji Restoration</a> from Voices of the Past. Crucial to understanding the Japanese mindset in the period.</p>
+
+<p>&#x200B;</p>
+
+<p>I don&#39;t know what your background is so I&#39;ll just give you a bunch of Wikipedia links, as well:</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Crimean_War">Crimean War</a> &lt;-- One of the first conflicts where people start to understand that Napoleonic tactics aren&#39;t so great anymore.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Mexican%E2%80%93American_War">Mexican-American War</a> &lt;-- Basically the &quot;How to Warfare&quot; Tutorial for all American generals in the Civil War</p>
+
+<p><a href="https://en.wikipedia.org/wiki/American_Civil_War">American Civil War</a> &lt;-- Fun fact: Abraham Lincoln specifically said that he <em>wasn&#39;t</em> going to emancipate black slaves, but the South f&#39;ed around and found out.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Russo-Japanese_War">Russo-Japanese War</a> &lt;-- Widely regarded as a bad move.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Second_Boer_War">Second Boer War</a> &lt;-- Slave-owning Dutch Republics in South Africa fight Great Britain and sorta put up a good fight until they don&#39;t. </p>
+
+<p><a href="https://en.wikipedia.org/wiki/Scramble_for_Africa">Scramble for Africa</a> &lt;-- Germany gets really mad that they don&#39;t have colonies and throws a fit to get some, plus horrific atrocities committed by the Belgians.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Great_Game">&quot;The Great Game&quot;</a> &lt;-- Mainly just Great Britain flexing on Russia.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Unification_of_Italy">Risorgimento (Unification of Italy)</a> &lt;-- Garibaldi is a gigachad.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Sim%C3%B3n_Bol%C3%ADvar">Simón Bolívar</a> &lt;-- The South American Napoleon</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Trail_of_Tears">Trail of Tears</a> &lt;-- Andrew Jackson was a genocidal slave owner. This is the event that created the &quot;Indian Territory&quot; which you must play to get that achievement where you beat the sh*t out of the U.S.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Wounded_Knee_Massacre">Wounded Knee</a> &lt;-- I cannot understate how important this event is for American-First Nations&#39; relations.</p>
+
+<p>Unfortunately, these are all the things I can think of at the moment. The sheer amount of <em>stuff</em> that happens in these 100 years is ridiculous, and there are regions where I lack knowledge. I tried my best to give you a non-Eurocentric list, but they <em>did</em> dominate this period.</p>
+</div></div>
+</div>
+<div class="post">
+<h2>Useful resource - GDP per capita of European nations in 1914</h2>
+<span class = "user">posted by: u/None </span><span class = "numcomments">114 comments </span><a href="https://imgur.com/zUfu4T0" target="_blank">(source)</a>
+<button onclick="toggles(629)">View full post</button><div id="629" class="mdwrapper"><p>NO BODY FOR THE SUBMISSION</p></div>
+</div>
+</div>
+<script src="../assets/js/script.js"></script>
+</body></html>
